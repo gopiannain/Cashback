@@ -12,7 +12,7 @@ async.series([
     cashback // RUN only if the value is SPEND
 ], function (error, result) {
     if (error) { console.log(result[0]); }
-    else if (result) { console.log('Award cashback: ', result[1]); }
+    else if (result) { console.log('Award cashback: ', Number(result[1]).toFixed(2)); }
 });
 
 // Only run if the argument "SPEND"
@@ -22,8 +22,8 @@ function cashback (callback) {
 
        var arrayOfNumbers = myArgs.map(parseFloat)
 
-       var min_spend = _.min(arrayOfNumbers);
-       var max_spend = _.max(arrayOfNumbers);
+       var min_spend = _.min(arrayOfNumbers); //Ignore NaN. filter only integer and return minumum value from an array
+       var max_spend = _.max(arrayOfNumbers); //Ignore NaN. filter only integer and return maximum value from an array
 
        if(min_spend >= 50)
         cashback = (max_spend * 20)/100;

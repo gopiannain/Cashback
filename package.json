@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeforgeek/Node-and-mongo-tutorial"
+    "url": "https://github.com/gopiannain/Cashback"
   },
   "keywords": [
     "Node.js",
@@ -18,9 +18,9 @@
   "author": "Gopinathan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codeforgeek/Node-and-mongo-tutorial/issues"
+    "url": "https://github.com/gopiannain/Cashback/issues"
   },
-  "homepage": "https://github.com/codeforgeek/Node-and-mongo-tutorial",
+  "homepage": "https://github.com/gopiannain/",
   "dependencies": {
     "underscore": "^1.8.3",
     "async": "^2.4.0"

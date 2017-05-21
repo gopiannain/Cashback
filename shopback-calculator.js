@@ -8,11 +8,11 @@ var redeem = {"www.shopback.sg":"http://www.shopback.sg","www.shopback.my":"http
 
 
 async.series([
-    checkfn(myArgs),
-    cashback
+    checkfn(myArgs), // check SPEND or REDEEM OR SIGNUP
+    cashback // RUN only if the value is SPEND
 ], function (error, result) {
     if (error) { console.log(result[0]); }
-    if (result) { console.log('Award cashback: ', result[1]); }
+    else if (result) { console.log('Award cashback: ', result[1]); }
 });
 
 // Only run if the argument "SPEND"
